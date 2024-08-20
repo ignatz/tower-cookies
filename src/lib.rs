@@ -83,7 +83,8 @@ pub struct Cookies {
 }
 
 impl Cookies {
-    fn new(headers: Vec<HeaderValue>) -> Self {
+    /// Builds a new Cookies object from the given headers.
+    pub fn new(headers: Vec<HeaderValue>) -> Self {
         let inner = Inner {
             headers,
             ..Default::default()
